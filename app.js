@@ -11,6 +11,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
+
 mongoose.connect('mongodb://172.20.0.2:27017/loginapp');
 var db = mongoose.connection;
 
@@ -29,6 +30,7 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 
 // Set Static Folder
 app.use(express.static(path.join(__dirname, 'public')));
